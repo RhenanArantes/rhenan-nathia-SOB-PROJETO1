@@ -1,8 +1,8 @@
-obj-m += projeto1SOB.o
+obj-m += proj1SOb.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
-	$(CC) programaTeste.c -o programaTeste
+	$(CC) teste.c -o teste
 clean:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
-	$(RM) programaTeste
+	$(RM) teste
